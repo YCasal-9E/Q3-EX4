@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Exercise 4: Area of A Rectangle</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<body>
+<div class="container mt-5 mb-4 p-4">
+	<script type="text/javascript">
+		document.write("<h1>Area of a Rectangle</h1>");
+	</script>
+	<img src="rectangle.png" class="mb-4 mt-4">
+
+	<form action="">
+			<label for="heightInput">Height:</label>
+			<input type="text" name="heightInput" id="heightValue">
+			<br />
+			<label for="widthInput">Width:</label>
+			<input type="text" class="mt-4" name="widthInput" id="widthValue">
+	</form>
+
+
+	<h3 id="rect-area" class="mt-4">The area of the rectangle is ?</h3>
+
+	<button type="button" class="mt-4 btn btn-primary" onclick="area()
+	">COMPUTE</button>
+
+	<script type="text/javascript">
+		function area() {
+			var height= document.getElementById('heightValue').value; 
+			var width= document.getElementById('widthValue').value; 
+			var r_area= height*width;
+			var rr_area= r_area.toFixed(2);
+			document.getElementById('rect-area').innerHTML='The area of the rectangle is ' + rr_area + '.' ;
+		}
+	</script>
+
+	<button type="button" class="mt-4 btn btn-primary" onClick="window.location.reload()">REFRESH</button>
+
+</div>
+</body>
+</html>
